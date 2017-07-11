@@ -1,1 +1,1 @@
-console.log(11),console.log(22);
+"user strict";angular.module("app",[]);
