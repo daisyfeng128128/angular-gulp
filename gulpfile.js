@@ -12,7 +12,7 @@ var app = {
 
 //把bower下载的第三方创建拷贝到生产环境目录
 gulp.task('lib',function(){
-	gulp.src('bower_components/**/*')
+	gulp.src('bower_components/**/*.js')
 	.pipe(gulp.dest(app.devPath+'vendor'))
 	.pipe(gulp.dest(app.prdPath+'vendor'))
 	.pipe($.connect.reload())//构建完，刷新浏览器进行实时预览
@@ -37,6 +37,7 @@ gulp.task('json',function(){
 
 gulp.task('less',function(){
 	gulp.src(app.srcPath+'style/index.less')
+	.pipe($.plumber()) //修复了pipe处理异常的bug，让任务执行更平滑
 	.pipe($.less())
 	.pipe(gulp.dest(app.devPath+'css'))
 	.pipe($.cssmin())
@@ -47,6 +48,7 @@ gulp.task('less',function(){
 
 gulp.task('js',function(){
 	gulp.src(app.srcPath+'script/**/*.js')
+  	.pipe($.plumber())
 	.pipe($.concat('index.js'))
 	.pipe(gulp.dest(app.devPath+'js'))
 	.pipe($.uglify())
@@ -57,6 +59,7 @@ gulp.task('js',function(){
 
 gulp.task('image',function(){
 	gulp.src(app.srcPath+'image/**/*')
+	.pipe($.plumber())
 	.pipe(gulp.dest(app.devPath+'image'))
 	.pipe($.imagemin())
 	.pipe(gulp.dest(app.prdPath+'image'))
@@ -68,7 +71,7 @@ gulp.task('build',['image','js','less','json','html','lib']);
 
 //每次发布的时候，把之前的目录清除，避免旧的文件对当前项目造成影响
 gulp.task('clean',function(){  //构架任务
-	gulp.src([app.devPath,app.prdPath])
+	gulp.src([app.devPath, app.prdPath])
 	.pipe($.clean());
 
 });
