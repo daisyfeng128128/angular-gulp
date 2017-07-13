@@ -6,10 +6,6 @@ angular.module('app').config(['$stateProvider','$urlRouterProvider', function($s
 		url: '/main',  //hash值，在url上看到的，也可传参  方式1：/main:id
 		templateUrl: 'view/main.html', //页面
 		controller:'mainCtrl'
-		
-		// url: '/main',
-  //   	templateUrl: 'view/main.html',
-  //   	controller: 'mainCtrl'
 	});
 	$urlRouterProvider.otherwise('main');  //若以上路由都没实现，则转到这个路由
 }])
