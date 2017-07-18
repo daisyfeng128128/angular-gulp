@@ -1,18 +1,9 @@
 <ul class="position-list bg-w">
-	<li class="item">
-		<img class="logo f-l" src="image/company-3.png" alt="">
-		<h3 class="title">销售</h3>
-		<p class="text">
-			前度（上海）互联网<br>
-			2017-7-16 22:38
+	<li class="item" ng-repeat="item in data">
+		<img class="logo f-l" ng-src="{{item.imgSrc}}" alt="">
+		<h3 class="title">{{item.name}}</h3>
+		<p class="text" ng-bind="item.companyName + ' [' +item.city + '] ' + item.industry">
 		</p>
-	</li>
-	<li class="item">
-		<img class="logo f-l" src="image/company-3.png" alt="">
-		<h3 class="title">销售</h3>
-		<p class="text">
-			前度（上海）互联网<br>
-			2017-7-16 22:38
-		</p>
+		<p ng-bind="item.time"></p>
 	</li>
 </ul>
