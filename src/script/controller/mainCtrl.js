@@ -19,14 +19,14 @@ angular.module('app').controller('mainCtrl', ['$scope', function($scope){
 	}
 	];
 
-	// $scope.list2 = [{
-	// 	id:'2',
-	// 	name:'产品',
-	// 	companyName:'公司2',
-	// 	imgSrc:'image/company-2.png',
-	// 	city:'北京',
-	// 	industry:'互联网',
-	// 	time:'2017-7-18 21:37'
-	// }]
+	$scope.list2 = [{
+		id:'2',
+		name:'产品',
+		companyName:'公司2',
+		imgSrc:'image/company-2.png',
+		city:'北京',
+		industry:'互联网',
+		time:'2017-7-18 21:37'
+	}]
 	
 }])
