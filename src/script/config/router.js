@@ -6,11 +6,24 @@ angular.module('app').config(['$stateProvider','$urlRouterProvider', function($s
 		url: '/main',  //hash值，在url上看到的，也可传参  方式1：/main:id
 		templateUrl: 'view/main.html', //页面
 		controller:'mainCtrl'
-	}).state('position',{
+	})
+
+	.state('position',{
 		url:'/position/:id', //不同的职位有不同的详情，用id来区别
 		templateUrl:'view/position.html',
 		controller:'positionCtrl'
 
-	});
+	})
+
+	.state('company',{
+		url:'/company/:id', 
+		templateUrl:'view/company.html',
+		controller:'companyCtrl'
+
+	})
+
+
+
+
 	$urlRouterProvider.otherwise('main');  //若以上路由都没实现，则转到这个路由
 }])

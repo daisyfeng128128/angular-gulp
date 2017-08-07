@@ -1,9 +1,9 @@
 'use strict';
-angular.module('app').directive('appHead',[function(){
+angular.module('app').directive('appCompany',[function(){
 	return {
 		restrict:'A',
 		replace:true,
-		templateUrl:'view/template/head.html'
+		templateUrl:'view/template/company.html'
 
 	}
 }])
