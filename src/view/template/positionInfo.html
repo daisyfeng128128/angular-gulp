@@ -1,7 +1,7 @@
 <div class="bg-w position-info p-r">
-	<p><span>销售</span><span class="ml c-r">3k-5k</span></p>
-	<p><span>上海</span><span class="ml">1-3年</span><span>专科</span></p>
-	<p>成长空间大</p>
-	<img class="p-a" ng-src="{{imagePath}}" alt="">
+	<p><span ng-bind="pos.name"></span><span class="ml c-r" ng-bind="pos.salaryName"></span></p>
+	<p><span ng-bind="pos.cityName"></span><span class="ml" ng-bind="pos.experience"></span><span ng-bind="pos.education"></span></p>
+	<p ng-bind="pos.benefit"></p>
+	<img ng-show="isLogin" class="p-a" ng-src="{{imagePath}}" alt="">
 	<!-- 一般的指令，引号里面引用定义的属性，但这个指令需要加{{}} -->
 </div>
