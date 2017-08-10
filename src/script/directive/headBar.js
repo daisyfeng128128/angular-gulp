@@ -8,10 +8,17 @@ angular.module('app').directive('appHeadBar',[function(){
 			text:'@'
 
 		},
-		link:function(scope){
-			scope.back = function(){
+		link:function($scope){
+			$scope.back = function(){
 				window.history.back();
-			}
+			};
+			$scope.$on('abc',function(event, data){
+				//event事件对象
+				//data随着事件传入过来的数据
+				console.log(event,data);
+			});
+			$scope.$emit('cba',{name:2});
+
 		}
 
 
