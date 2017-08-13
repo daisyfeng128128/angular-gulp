@@ -1,5 +1,6 @@
 'use strict';
-angular.module('app').controller('positionCtrl', ['$q','$http', '$state', '$scope', function($q, $http, $state, $scope){
+angular.module('app').controller('positionCtrl', ['$q','$http', '$state', '$scope', 'cache', function($q, $http, $state, $scope,cache){
+	cache.put('to','you');
 	$scope.isLogin = false;
 
 	function getPosition(){
@@ -43,7 +44,7 @@ angular.module('app').controller('positionCtrl', ['$q','$http', '$state', '$scop
 	// $q.all([fun1(),fun2()]).then(doneCallbacks, failCallbacks)
 	//数组里的元素都是promise对象
 	//返回的result也是一个数组，它的下标跟promise传出来的参数是一一对应的
-	$q.all([fun1(),fun2()]).then(function(result){})
+	// $q.all([fun1(),fun2()]).then(function(result){})
 	
 	
 }])

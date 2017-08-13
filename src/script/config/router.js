@@ -22,6 +22,13 @@ angular.module('app').config(['$stateProvider','$urlRouterProvider', function($s
 
 	})
 
+	.state('search',{
+		url:'/search', 
+		templateUrl:'view/search.html',
+		controller:'searchCtrl'
+
+	})
+
 
 
 

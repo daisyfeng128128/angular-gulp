@@ -1,5 +1,3 @@
 'user strict';
-angular.module('app', ['ui.router']).run(['$rootScope',function($rootScope){
-
-}]);
+angular.module('app', ['ui.router','ngCookies']);
 
