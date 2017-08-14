@@ -1,5 +1,5 @@
 .tab{
-	background-color:@bodyBgColor;
+	background-color:@tabBgColor;
 	position:fixed;
 	left:0;
 	right:0;
@@ -13,6 +13,12 @@
 		width:33.3%;
 		.h(40);
 		.lh(40);
+		border-bottom: 2px solid @bodyBgColor;
+		&.active{
+			border-bottom: 2px solid @headBgColor;
+
+		}
+
 	}
 
 }
