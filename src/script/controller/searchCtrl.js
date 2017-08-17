@@ -8,6 +8,7 @@ angular.module('app').controller('searchCtrl', ['dict', '$http', '$scope', funct
 	}
 	
 	$scope.search();
+	$scope.sheet = {};
 	$scope.tabList = [{
 		id:'city',
 		name:'城市'
@@ -20,8 +21,14 @@ angular.module('app').controller('searchCtrl', ['dict', '$http', '$scope', funct
 	}];
 
 	$scope.tClick = function(id, name){
+		$scope.sheet.list = dict[id];
+		$scope.sheet.visible = true;
+	}
+
+	$scope.sClick = function(id, name){
 		console.log(id, name)
 	}
+
 
 
 }])
