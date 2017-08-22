@@ -1,0 +1,74 @@
+.login{
+	background: url(../image/background.png) no-repeat;
+	background-size: 100% 100%;
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	right: 0;
+	top: 0;
+	botton:0;
+
+	form{
+		.mt(260);
+		.form-line{
+			margin-left: auto;
+			margin-right:auto;
+			box-sizing: content-box;
+			.w(300);
+			.h(40);
+			.lh(40);
+			font-size:0;
+			background-color:@formBgColor;
+			color:@defaultColor;
+			&:first-child{
+				border-bottom: 1px solid @defaultColor;
+			}
+
+			span{
+				background-color:@iconBgColor;
+				background-position: 16px 8px;
+				background-repeat: no-repeat;
+				.w(55);
+				height:100%;
+			}
+			.account{
+				background-image: url(../image/account.png);
+			}
+			.lock{
+				background-image: url(../image/lock.png);
+			}
+			input{
+				border-width:0;
+				outline-width:0;
+				background-color:@formBgColor;
+				box-sizing:border-box;
+				.fs(14); 
+				.w(245);
+				.pl(30);
+				height:100%;
+				&::-webkit-input-placeholder{
+					color:@defaultColor;
+				}
+			}
+			
+		}
+		button{
+			.w(300);
+			.h(35);
+			font-size: 22px;
+			font-weight: bold;
+			&.login-btn{
+				margin-top:75px; 
+				background-color:@headBgColor;
+				color: @defaultColor;
+			}
+			&.register-btn{
+				margin-top:20px; 
+				background-color:@btnBgColor;
+				color:@headBgColor;
+				border:1px solid @headBgColor;
+			}
+		}
+	}
+}
