@@ -4,5 +4,9 @@ angular.module('app').controller('registerCtrl', ['$http', '$scope', function($h
 	/*$http.get('/data/positionList.json').success(function(resp){
 		$scope.list = resp;
 	});*/
+	$scope.user = {
+		phone:123,
+		password:123456
+	}
 
 }])
